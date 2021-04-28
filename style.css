@@ -1,0 +1,39 @@
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),  url(https://image.freepik.com/free-photo/blue-water-surface-with-bright-sun-light-reflections-water-swimming-pool-background_55716-1193.jpg);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.title {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.4);
+  font-size: 1.5em;
+  background: linear-gradient(lightcyan, #fff);
+  padding: 1.1em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.student {
+  max-height: 100px;
+  padding: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.4);
+  text-align: center;
+  background: linear-gradient(#fff, #eee, #cee)
+}
+.student:active {
+  margin-top: 23px;
+  margin-bottom: 7px;
+}
