@@ -3,20 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title>GOAT!!!</title>
-  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAyZ6p7Legaog9VKdAxWv1tn4xn6mso4y8",
+      authDomain: "bcc-webdev-2021.firebaseapp.com",
+      projectId: "bcc-webdev-2021",
+      storageBucket: "bcc-webdev-2021.appspot.com",
+      messagingSenderId: "754641702465",
+      appId: "1:754641702465:web:5fe8b08a8bcde7fcdcc0c0",
+      measurementId: "G-LQK3NY4WEY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 
 </head>
+
 <body>
 <!-- partial:index.partial.html -->
 <div class="box">
-  <img id="james" height="25%" width="100%" src="https://miro.medium.com/max/1200/1*GRhI0b3sO9YWJbfxwX5Ulg.jpeg"/>
-  <div> Lebron James is the most rounded player of these three. He is the highest scorer of the three while still playing. He has plenty of gas left in the tank and has his sights set on being the GOAT when its all said and done.</div>
-  <img id="bryant" height="25%" width="100%" src="https://sneakers-magazine.com/wp-content/uploads/2015/11/KobeBryant-Kopie-e1448897538275.jpg"/>
-    <div> Kobe Bryant was arguably the purest scorer of all time. He did get his moves from Michael Jordan but added his own touch. He was infamous for his killer mentality, the Momba Mentality, and his other worldly work ethic. While not usually put in this conversation he most definatly belongs in it.
-   <img id="jordan" height="25%" width="100%" src="https://img.bleacherreport.net/img/images/photos/002/163/355/856758_10151259065661006_876632695_o_crop_exact.jpeg?w=1200&h=1200&q=75"/>
-<div> Michael Jordan was electic to watch. His scoring ability and inhuman athleticism was must see tv. With an alleged 48 inch vertical at his peak, his monster dunks and acrobatic finishes mesmerized his fans. He was insanely competitive and he is regarded as the GOAT by many.
+  <div class="votePic">
+    <div>Votes: <span id="player1"></span></div>
+    <img id="james" src="https://miro.medium.com/max/1200/1*GRhI0b3sO9YWJbfxwX5Ulg.jpeg"/>
+  </div>
+  <div class="description"> Lebron James is the most rounded player of these three. He is the highest scorer of the three while still playing. He has plenty of gas left in the tank and has his sights set on being the GOAT when its all said and done.</div>
+  <div class="votePic">
+    <div>Votes: <span id="player2"></span></div>
+    <img id="bryant"  src="https://sneakers-magazine.com/wp-content/uploads/2015/11/KobeBryant-Kopie-e1448897538275.jpg"/>
+  </div>
+  <div class="description"> Kobe Bryant was arguably the purest scorer of all time. He did get his moves from Michael Jordan but added his own touch. He was infamous for his killer mentality, the Momba Mentality, and his other worldly work ethic. While not usually put in this conversation he most definatly belongs in it.</div>
+  <div class="votePic">
+    <div>Votes: <span id="player3"></span></div>
+    <img id="jordan" src="https://img.bleacherreport.net/img/images/photos/002/163/355/856758_10151259065661006_876632695_o_crop_exact.jpeg?w=1200&h=1200&q=75"/>
+  </div>
+<div class="description"> Michael Jordan was electic to watch. His scoring ability and inhuman athleticism was must see tv. With an alleged 48 inch vertical at his peak, his monster dunks and acrobatic finishes mesmerized his fans. He was insanely competitive and he is regarded as the GOAT by many.
 </div>
 <!-- partial -->
   
 </body>
+<style>
+.votePic {
+  font-size: x-large;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.votePic > div {
+  padding: 20px;
+}
+.votePic > img {
+  width: 50%;
+}
+.description {
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  
+  .votePic {
+    font-size: 30pt;
+  }
+  .votePic > img {
+    width: 75%;
+  }
+}
+</style>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+  
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAyZ6p7Legaog9VKdAxWv1tn4xn6mso4y8",
+    authDomain: "bcc-webdev-2021.firebaseapp.com",
+    projectId: "bcc-webdev-2021",
+    storageBucket: "bcc-webdev-2021.appspot.com",
+    messagingSenderId: "754641702465",
+    appId: "1:754641702465:web:5fe8b08a8bcde7fcdcc0c0",
+    measurementId: "G-LQK3NY4WEY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+
+  db.collection('votes').doc('bcc').get().then(function(snap) {
+    let votes = snap.data()
+    Object.keys(votes).forEach(function(vote){
+      let element = document.getElementById(vote)
+      if(element) element.innerHTML = votes[vote]
+    })
+  })
+
+</script>
 </html>
