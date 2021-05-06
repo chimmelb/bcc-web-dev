@@ -1,0 +1,62 @@
+.women{
+  border: 5px solid red;
+  background: salmon;
+  border-radius: 3px;
+  margin: 70px;
+  width: 20%;
+  padding: 5px;
+  transition: 0.1s;
+  font-family: Arial;
+}
+.women:active{
+  background: blue;
+  border: 5px solid teal;
+  transform: rotate(5deg);
+  scale: 200%;
+  transition: 0.1s;
+}
+.background {
+  background-image: url('https://cdn.britannica.com/98/209198-050-5DC2BD4F/Sudeten-Germans-marching-bridge-flags-Karlsbad-Germany-April-1937.jpg');
+  background-size: 100% 100%;
+  height: 1000px;
+  font-family: Impact;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: dotted 2px black;
+  padding: 100px;
+}
+.humorjoke {
+  background-image: url('https://en.meming.world/images/en/thumb/c/cd/Get_Nae_Nae%27d.jpg/300px-Get_Nae_Nae%27d.jpg');
+  height: 200px;
+  width: 200px;
+  display: flex;
+  border: 3px dotted red;
+  color: white;
+  background-size: 100% 100%;
+  margin: 6px;
+  transition: 10.1s;
+  font-family: Arial;
+}
+.humorjoke:active{
+  transition: 0.05s;
+  scale: 110%;
+}
+
+.spin {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.MdcXd1bwGcLMkXOphLKEmAHaHa%26pid%3DApi&f=1');
+  background-size: 100% 100%;
+  margin: 10%;
+  padding: 8px;
+  border: 5px solid red;
+  border-radius: 4px;
+  width: 320px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  transition: 5s;
+}
+.spin:active {
+  transition: 5s;
+  transform: rotate(123124098deg);
+}

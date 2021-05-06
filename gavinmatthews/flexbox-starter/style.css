@@ -1,0 +1,48 @@
+.child {
+  background-color: salmon;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px;
+  //height: 100px;
+  width: 10%;
+}
+.one {
+  align-self: grow;
+  border: 5px solid teal;
+  border-radius: 3px;
+  flex-grow: 1;
+  order: 1;
+}
+.two {
+  align-self: flex-end;
+  background: blue;
+  color: red;
+  border: 5px solid green;
+  border-radius: 3px;
+  flex-grow: 1;
+  order: 1;
+}
+.three{
+  background:lightgrey;
+  align-self: stretch;
+  border: 5px solid;
+  border-radius: 3px;
+  flex-grow: 2;
+}
+.parent {
+  height: 90vh;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.abcotvs.com%2Fdip%2Fimages%2F5320622_052819-shutterstock-hamburger-im.jpg%3Fw%3D1600&f=1&nofb=1');
+  padding: 5px;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  border-radius: 13px;
+}
+.html{
+  align: center;
+}

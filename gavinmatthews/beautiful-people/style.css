@@ -1,0 +1,45 @@
+div {
+  font-family: arial;
+  background:linear-gradient(45deg, red, violet);
+  font-size: 30px;
+  border: 3px solid;
+  width: 200px;
+  padding: 20px;
+}
+p {
+  width: 400px;
+  height: 100px;
+  font-family: Impact;
+  background: brown;
+  font-size: 40px;
+  font: Impact;
+  color:linear-gradient(45deg,red,#178276);
+  border: 10px solid black;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#husband {
+  font-size: 20px;
+  background: green;
+  border: 3px dashed;
+  border-color:black;
+  
+}
+.page {
+  margin-top: 1px;
+  width: 500px;
+  border-radius: 50px;
+  background:linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, #b4c29c);
+}
+.racism {
+  margin: 20px;
+  background: linear-gradient(-210.5deg, red, #a73298);
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border-color: #443042;
+}
+body{
+  background: beige;
+}

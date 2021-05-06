@@ -1,0 +1,60 @@
+#kevin {
+background: green;
+border: 10px solid black;
+border-radius: 10px;
+text-color: white;
+font-family: Hanalei;
+color: black;
+font-size: 42pt;
+width: 200px;
+height: 200px;
+padding: 10px;
+font-weight: 100;
+}
+#bigboy {
+font-family: Hachi Maru Pop;
+font-size: 50pt;
+color: red;
+background: blue;
+border: 10px dotted red;
+height: 1000px;
+width: 1000px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#button{
+color: white;
+width: 500px;
+height: 200px;
+border-radius: 10px;
+margin: 5px;
+background: red;
+border: 3px solid black;
+font-family: Comic sans MS;
+font-size: 22pt;
+transition: 0.1s;
+}
+#button:active {
+   background: red;
+  border: 5px solid rgb(170, 25, 30);
+  transform: rotate(0.5deg);
+  scale: 130%;
+  transition: 0.1s;
+}
+#deadkids {
+  font-family: Arial;
+  font-size: 20pt;
+  color: white;
+  margin: 5px;
+}
+#checkdiv {
+  background: grey;
+  border: 3px solid black;
+  border-radius: 4px;
+  
+}
+#button-focus {
+  box-shadow: 
+    0px 0px 0px 2px #2960C5,
+    0px 0px 0px 3px #FFFFFF;

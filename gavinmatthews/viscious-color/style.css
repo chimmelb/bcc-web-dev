@@ -1,0 +1,56 @@
+.son {
+  margin: px;
+  padding: 10px;
+  background: salmon;
+  font-size: 20px;
+  font-family: comic sans ms;
+  border:10px dashed;
+  border-radius:20px;
+  border-left-color: red;
+  border-right-color: blue;
+  border-top-color: green;
+  border-bottom-color: purple;
+  width: 80%;
+  height: 80%;
+  
+}
+.bigson {
+  background-image: url('https://www.mariowiki.com/images/d/dd/ToadGangster.jpg');
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  width: 90vw;
+  height: 50vw;
+}
+img {
+  width: 50%;
+  margin: 2%;
+  border-radius: 20px;
+}
+.86 {
+  font-family: Arial;
+  border: 10px solid black;
+}
+.videoman {
+  font-size: 40px;
+  background: red;
+  padding: 10px;
+  height: 700px;
+  width: 60vw;
+  border:10px black solid;
+  border-radius: 10px;
+}
+#video {
+  width: 60vw;
+  
+}
+.lel{
+  font-family: Impact;
+  color:teal;
+  text-shadow: 1.3px 0.2px 0.3px pink;
+}
+body{
+  background-image: url('https://community.custom-cursor.com/uploads/default/original/3X/2/9/2901efeb41c3b3faeaabf96d97f61b54ea223d34.png');
+  background-size: 10% 5%;
+}
